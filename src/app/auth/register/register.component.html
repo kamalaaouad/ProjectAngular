@@ -1,0 +1,17 @@
+<div class="login-page">
+  <div class="form">
+
+      <input [(ngModel)]="User.name" type="text" placeholder="username"/>
+        <input [(ngModel)]="User.email" type="email" placeholder="email address"/>
+        <input [(ngModel)]="User.password" type="password" placeholder="password"/>
+        <input [(ngModel)]="User.Cfpassword" type="password" placeholder="password"/>
+        <input [(ngModel)]="User.IsUser" type="hidden" name="IsUser" value="true">
+        <button (click)="CreateUser()">Register</button>
+        <div *ngIf="passwordIsCorrect" class="alert alert-danger" role="alert">
+          il faut verifier votre mot de passe
+        </div>
+        {{ User.name|json }}
+
+
+  </div>
+</div>
